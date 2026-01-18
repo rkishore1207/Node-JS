@@ -81,3 +81,12 @@ const http = require('http');
 - Usually Node Js, has it's own **Code Flow Registery**, there it will run the code line by line.
 - While running, if it finds any event listener, first it will **register it there(Event Emitter Registery)** and move on to the next line of code.
 - Because, the next parameter in the event listener is `CallBack function`, so it will execute after some time.
+
+#### Internal Working of Node Js
+
+- Node Js follows a `Single thread processing`, it will execute all request within a thread.
+- But it has **Event Loop**, that will take cares the **Callback functions**.
+- On the first iteration, it will execute the sync code and push all the callbacks into **Worker Pool**, on the second iteration, again it will execute those call backs, in the mean time, that one thread will focus on the _next I/O_.
+
+![Node Js Internal Working](https://github.com/user-attachments/assets/7e0eb234-5c62-4d6d-99fa-6762abffceda)
+![Event Loop](https://github.com/user-attachments/assets/eb0a6e3d-fcac-4d49-bfcd-f3d1018adacb)
