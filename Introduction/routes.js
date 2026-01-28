@@ -31,14 +31,7 @@ const handleRequests = (request, response) => {
       });
     });
   }
-  response.setHeader("Content-Type", "text/html");
-  response.write("<html>");
-  response.write("<head><title>My Node Js Server</title></head>");
-  response.write("<body>");
-  response.write("<h1>Hello from my Node Js Server</h1>");
-  response.write("</body>");
-  response.write("</html>");
-  response.end();
+  return;
 };
 
 module.exports = handleRequests;

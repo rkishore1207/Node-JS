@@ -99,3 +99,8 @@ const http = require('http');
 - When we install the package, if we add **--save-dev**, then this package will only include during our development, if we add **-g**, it will add on the entire machine, if we just add **--save**, then it will add on both dev and production places.
 - The `uparrow ^` in the front of all packages, indicates that, if we just type npm install, then this will install all the packages with the latest version.
 - But if we have the **package-lock.json** file, then it already have the current version of packages, then npm install will install the **mentioned versions** in the package-lock.json.
+
+## Express Js
+
+- It is a **framework** for Node js, which does all the necessary functionalities, then our job is to focus on the business logics alone.
+- Alternatives for Express Js are Vanilla Node Js, Adonis Js, Koa, Sails.js, etc...
