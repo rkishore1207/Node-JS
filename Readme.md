@@ -104,3 +104,6 @@ const http = require('http');
 
 - It is a **framework** for Node js, which does all the necessary functionalities, then our job is to focus on the business logics alone.
 - Alternatives for Express Js are Vanilla Node Js, Adonis Js, Koa, Sails.js, etc...
+- We can invoke a express as a function and it will gives us lot of features to **use**.
+- One of them is use() function, which accepts requestHandler function with next function as one of the parameter.
+- This `next` function helps the request to pass into the upcoming middleware.
