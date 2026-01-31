@@ -117,3 +117,10 @@ const http = require('http');
 - To server a HTML file, we could use **res.SendFile()** with `path` Node js feature.
 - **path.Join()** will identify the current Operating system and joins the path accordingly. That is if it is Linux, then it will add '/', if it is Windows, then it will add '\'.
 - `__dirname` is the global Node Js property, which will give the entire OS path to the current directory.
+
+### Express Js's Static Pages
+
+- We allow some of the **static file's read access** to User.
+- Mostly the `css` files are static ones, so we have to put it them under `public` folder.
+- Express Js, provides **Static Middleware** to register the static folder.
+- The request will go to static folder, and check if any of the files are matching, if not, then it will go to the routing middleware, if none of the routes are match, then only it will throw the 404 page.
