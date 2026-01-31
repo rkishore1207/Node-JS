@@ -1,0 +1,40 @@
+.form-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.input-container {
+  display: block;
+}
+
+.input-container label {
+  font-size: larger;
+}
+
+.input-container input,
+.input-container input:focus,
+.input-container input:active {
+  border: 1px solid #ecba31;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  padding: 0.5rem;
+  font-size: medium;
+}
+
+.form-control button,
+.form-control button:active {
+  background-color: white;
+  border: 1px solid #4043f3;
+  color: #4043f3;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: medium;
+}
+
+.form-control button:hover {
+  background-color: #4043f3;
+  color: white;
+}
