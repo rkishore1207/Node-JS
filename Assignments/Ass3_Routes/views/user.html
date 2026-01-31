@@ -3,29 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Product</title>
+    <title>Add User</title>
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/product.css" />
+    <link rel="stylesheet" href="/css/user.css" />
   </head>
   <body>
     <header class="main-header">
       <nav class="main-header__nav">
         <ul class="main-header__list">
-          <li class="main-header__item"><a href="/">Shop</a></li>
+          <li class="main-header__item"><a href="/">Index</a></li>
           <li class="main-header__item">
-            <a class="active" href="/admin/add-product">Add Product</a>
+            <a class="active" href="/user/add-user">Add User</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-content">
-      <form class="form-content" action="/admin/add-product" method="POST">
+      <form class="form-content" action="/user/add-user" method="POST">
         <div class="form-control">
           <div class="input-container">
             <label for="title" class="title-text">Title</label>
             <input type="text" name="title" id="title" />
           </div>
-          <button type="submit">Add Product</button>
+          <button type="submit">Add User</button>
         </div>
       </form>
     </main>

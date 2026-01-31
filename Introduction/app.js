@@ -15,6 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //   next(); // This allows the request to go into the next middleware
 // });
 
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use("/admin", adminRoutes);
 app.use(shopRoutes);
 
