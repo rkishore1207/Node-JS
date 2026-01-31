@@ -2,6 +2,9 @@ const http = require("http");
 //const handleRequests = require("./routes");
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 
 const app = express();
 
@@ -12,21 +15,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //   next(); // This allows the request to go into the next middleware
 // });
 
-app.use("/add-product", (req, res, next) => {
-  res.send(
-    "<form action='/product' method='POST'><input type='text' name='title'/><button>Add Product</button></form>",
-  );
-});
+app.use("/admin", adminRoutes);
+app.use(shopRoutes);
 
-// strict to the incoming POST request
-app.post("/product", (req, res, next) => {
-  console.log(req.body);
-  res.redirect("/");
-});
-
-app.use("/", (req, res, next) => {
-  res.setHeader("Content-type", "text/html"); // optional one
-  res.send("<h1>Hello from Express Js!</h1>");
+app.use((req, res, next) => {
+  //   res.status(404).send("<h1>Page Not Found</h1>");
+  res.status(404).sendFile(path.join(__dirname, "views", "pageNotFound.html"));
 });
 
 // const server = http.createServer(handleRequests);

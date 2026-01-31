@@ -107,3 +107,13 @@ const http = require('http');
 - We can invoke a express as a function and it will gives us lot of features to **use**.
 - One of them is use() function, which accepts requestHandler function with next function as one of the parameter.
 - This `next` function helps the request to pass into the upcoming middleware.
+- To parse the incoming request, we are using `body-parser` npm package, because there is a problem in the inbuilt functionality of parsing in express js.(They are pulling out and adding again).
+- To Parse the HTML request, we are using `bodyParser.urlEncoded()`.
+
+### Express Js's Routes
+
+- We can separate the middleware to a individual files, and import them in app.js and use it in the same order.
+- If the **prefix** for routes in the same middleware is same, then we can give it in the app.js's middleware invocation itself.
+- To server a HTML file, we could use **res.SendFile()** with `path` Node js feature.
+- **path.Join()** will identify the current Operating system and joins the path accordingly. That is if it is Linux, then it will add '/', if it is Windows, then it will add '\'.
+- `__dirname` is the global Node Js property, which will give the entire OS path to the current directory.
